@@ -4,8 +4,10 @@ import wrapper from '../redux/store';
 import GlobalStyle from '../styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../styles/theme';
+import { Provider } from 'react-redux';
 
 function App({ Component, pageProps }: AppProps) {
+  const { store, props } = wrapper.useWrappedStore(pageProps);
   const queryClient = new QueryClient();
 
   return (
@@ -13,10 +15,12 @@ function App({ Component, pageProps }: AppProps) {
       <Hydrate state={pageProps.dehydratedState}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Component {...pageProps} />
+          <Provider store={store}>
+            <Component {...pageProps} />
+          </Provider>
         </ThemeProvider>
       </Hydrate>
     </QueryClientProvider>
   );
 }
-export default wrapper.withRedux(App);
+export default App;
