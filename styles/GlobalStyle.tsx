@@ -1,9 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family:"Inter";
-  src: url("../../static/fonts/Inter.ttf");
-}
   html,
   body {
     padding: 0;
