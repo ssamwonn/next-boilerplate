@@ -19,7 +19,7 @@
       "@components/*": ["./components/*"],
       "@utils/*": ["./utils/*"],
       "@pages/*": ["./pages/*"],
-      "@type/*": ["./type/*"],
+      "@type/*": ["./types/*"],
       "@redux/*": ["./redux/*"],
       "@constant/*": ["./constant/*"]
     }
