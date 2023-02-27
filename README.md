@@ -1,4 +1,4 @@
-## project name : next-bolierplate
+## project name : next-bolierplate setting
 
 ### library
 
